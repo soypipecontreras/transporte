@@ -26,3 +26,4 @@ supabase gen types typescript --local > types/database.ts   # tipos para el fron
 | `supabase/seed.sql` | Datos demo y usuarios de prueba |
 | `packages/db` | Pruebas del esquema con PGlite: flujo completo, permisos y cálculos |
 | `docs/contrato-front.md` | Cómo conectarse, qué leer, qué RPC llamar, estados, errores y archivos |
+| `apps/mockups` | Mockups navegables de las tres apps. Se publican solos en https://transporte-mockups.vercel.app con cada push a `main` |
