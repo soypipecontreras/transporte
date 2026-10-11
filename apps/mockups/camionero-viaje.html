@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Camionero · Viaje en curso · Transporte</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#C2410C}a:hover{color:#9A3412}
+</style>
+<style>body{margin:0;background:#2A2D35;font-family:Archivo,sans-serif}
+.escenario{min-height:100vh;display:flex;flex-direction:column;align-items:center;gap:16px;padding:24px 16px;box-sizing:border-box}
+.celular{border-radius:36px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.45);border:10px solid #0B0C0F}
+.volver{color:#F3F1EC;font-weight:600;text-decoration:none}
+@media (max-width:430px){.escenario{padding:0;gap:0}.celular{border:0;border-radius:0;box-shadow:none}.volver{padding:12px}}</style>
+</head>
+<body>
+<div class="escenario"><a class="volver" href="index.html">← Todas las pantallas</a><div class="celular">
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F3F1EC; color: #15171C; font-family: Archivo, sans-serif; display: flex; flex-direction: column">
+  <header style="background: #15171C; color: #F3F1EC; padding: 20px; display: flex; flex-direction: column; gap: 14px">
+    <div style="display: flex; justify-content: space-between; align-items: center">
+      <div style="display: flex; flex-direction: column; gap: 2px">
+        <div style="font-size: 13px; color: #C9C4BA">Viaje PED-1001 · Manifiesto M-0001</div>
+        <div style="font-size: 22px; font-weight: 800; letter-spacing: -0.02em">En el cargue</div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #86EFAC">
+        <div style="width: 8px; height: 8px; border-radius: 999px; background: #22C55E"></div>GPS activo
+      </div>
+    </div>
+    <ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px">
+      <li style="height: 6px; border-radius: 3px; background: #C2410C"></li>
+      <li style="height: 6px; border-radius: 3px; background: #C2410C"></li>
+      <li style="height: 6px; border-radius: 3px; background: #3A3D45"></li>
+      <li style="height: 6px; border-radius: 3px; background: #3A3D45"></li>
+      <li style="height: 6px; border-radius: 3px; background: #3A3D45"></li>
+    </ol>
+    <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px; font-size: 11px; color: #C9C4BA">
+      <div>Rumbo</div><div style="color: #F3F1EC; font-weight: 700">Cargue</div><div>Tránsito</div><div>Descargue</div><div>Entrega</div>
+    </div>
+  </header>
+
+  <div style="flex: 1; padding: 16px; display: flex; flex-direction: column; gap: 12px; overflow: hidden">
+    <section style="background: #FFFFFF; border: 1px solid #DEDAD2; border-radius: 14px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+      <div style="display: flex; justify-content: space-between; align-items: baseline">
+        <div style="font-size: 14px; font-weight: 600; color: #5E5A52">Tiempo en el cargue</div>
+        <div style="font-size: 13px; color: #5E5A52">desde la cita, 8:00 a. m.</div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 8px">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 40px; font-weight: 600; letter-spacing: -0.02em">2:15</div>
+        <div style="font-size: 16px; color: #5E5A52">de 8:00 horas</div>
+      </div>
+      <div style="height: 10px; border-radius: 5px; background: #EDEAE3; overflow: hidden">
+        <div style="width: 28%; height: 10px; background: #166534"></div>
+      </div>
+      <div style="font-size: 13px; color: #5E5A52; line-height: 1.4">Desde la hora 9 la transportadora te reconoce $175.091 por cada hora adicional.</div>
+    </section>
+
+    <section style="background: #FFFFFF; border: 1px solid #DEDAD2; border-radius: 14px; padding: 16px; display: flex; flex-direction: column; gap: 12px">
+      <div style="display: flex; gap: 12px; align-items: center">
+        <div style="width: 40px; height: 40px; border-radius: 10px; background: #DCFCE7; display: flex; align-items: center; justify-content: center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#166534" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 2px">
+          <div style="font-size: 16px; font-weight: 700">Manifiesto expedido</div>
+          <div style="font-size: 13px; color: #5E5A52">Remesa R-0001 · llévalo en el celular</div>
+        </div>
+        <a href="#" style="margin-left: auto; font-size: 14px; font-weight: 700">Ver PDF</a>
+      </div>
+      <div style="height: 1px; background: #EDEAE3"></div>
+      <div style="display: flex; flex-direction: column; gap: 2px">
+        <div style="font-size: 13px; color: #5E5A52">Destino</div>
+        <div style="font-size: 16px; font-weight: 700">CEDI Itagüí · Cra 50 # 12 Sur-30</div>
+        <div style="font-size: 14px; color: #5E5A52">Cita de descargue: pasado mañana 8:00 a. m.</div>
+      </div>
+    </section>
+
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px">
+      <button type="button" style="height: 58px; border: 0; border-radius: 12px; background: #C2410C; color: #FFFFFF; font-size: 18px; font-weight: 700; font-family: Archivo, sans-serif">Salir cargado</button>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+        <button type="button" style="height: 50px; border-radius: 12px; border: 1px solid #C9C4BA; background: #FFFFFF; color: #15171C; font-size: 15px; font-weight: 700; font-family: Archivo, sans-serif">Foto de cargue</button>
+        <button type="button" style="height: 50px; border-radius: 12px; border: 1px solid #C9C4BA; background: #FFFFFF; color: #B91C1C; font-size: 15px; font-weight: 700; font-family: Archivo, sans-serif">Reportar novedad</button>
+      </div>
+    </div>
+  </div>
+
+  <nav style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); background: #FFFFFF; border-top: 1px solid #DEDAD2; padding: 8px 8px 20px 8px">
+    <a href="camionero-ofertas.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 6px 0; text-decoration: none; color: #5E5A52; font-size: 12px; font-weight: 600">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h12"></path></svg>Ofertas</a>
+    <a href="camionero-viaje.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 6px 0; text-decoration: none; color: #C2410C; font-size: 12px; font-weight: 700">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"></path><circle cx="12" cy="9" r="2.5"></circle></svg>Mi viaje</a>
+    <a href="camionero-pagos.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 6px 0; text-decoration: none; color: #5E5A52; font-size: 12px; font-weight: 600">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"></rect><path d="M3 10h18"></path></svg>Pagos</a>
+    <a href="#" style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 6px 0; text-decoration: none; color: #5E5A52; font-size: 12px; font-weight: 600">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>Perfil</a>
+  </nav>
+</div>
+</div></div>
+</body>
+</html>

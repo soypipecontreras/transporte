@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Monitoreo · Cumplidos y pagos · Transporte</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#C2410C}a:hover{color:#9A3412}
+</style>
+<style>.barra{background:#0B0C0F;padding:8px 16px}.volver{color:#F3F1EC;font-weight:600;text-decoration:none;font-family:Archivo,sans-serif;font-size:14px}</style>
+</head>
+<body>
+<div class="barra"><a class="volver" href="index.html">← Todas las pantallas</a></div>
+<div style="min-height: 960px; background: #F3F1EC; color: #15171C; font-family: Archivo, sans-serif; display: flex; flex-wrap: wrap">
+  <nav style="flex: 1 1 220px; max-width: 100%; background: #15171C; color: #F3F1EC; padding: 20px 14px; display: flex; flex-direction: column; gap: 4px; box-sizing: border-box">
+    <div style="display: flex; align-items: center; gap: 10px; padding: 0 8px 18px 8px">
+      <div style="width: 32px; height: 32px; border-radius: 8px; background: #C2410C; display: flex; align-items: center; justify-content: center">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h11v9H3z"></path><path d="M14 9h4l3 3v3h-7z"></path><circle cx="7" cy="17.5" r="1.8"></circle><circle cx="17" cy="17.5" r="1.8"></circle></svg>
+      </div>
+      <div style="display: flex; flex-direction: column"><span style="font-weight: 800">Transportes Demo</span><span style="font-size: 12px; color: #A39E94">Monitoreo</span></div>
+    </div>
+    <a href="ops-tablero.html" style="padding: 11px 12px; border-radius: 8px; color: #C9C4BA; font-weight: 600; text-decoration: none">Tablero en vivo</a>
+    <a href="ops-publicar.html" style="padding: 11px 12px; border-radius: 8px; color: #C9C4BA; font-weight: 600; text-decoration: none">Cargas</a>
+    <a href="ops-revision.html" style="padding: 11px 12px; border-radius: 8px; color: #C9C4BA; font-weight: 600; text-decoration: none">Camioneros <span style="background: #C2410C; color: #FFFFFF; font-size: 12px; padding: 1px 7px; border-radius: 999px; margin-left: 4px">2</span></a>
+    <a href="ops-pagos.html" style="padding: 11px 12px; border-radius: 8px; background: #2A2D35; color: #FFFFFF; font-weight: 700; text-decoration: none">Cumplidos y pagos</a>
+    <a href="#" style="padding: 11px 12px; border-radius: 8px; color: #C9C4BA; font-weight: 600; text-decoration: none">Clientes</a>
+  </nav>
+
+  <main style="flex: 999 1 640px; min-width: 0; padding: 24px 28px; display: flex; flex-direction: column; gap: 20px; box-sizing: border-box">
+    <div>
+      <h1 style="margin: 0; font-size: 28px; font-weight: 800; letter-spacing: -0.02em">Cumplidos y pagos</h1>
+      <p style="margin: 4px 0 0 0; color: #5E5A52">El pago al titular vence 5 días hábiles después del cumplido, aunque el cliente no haya pagado.</p>
+    </div>
+
+    <section style="display: flex; flex-direction: column; gap: 10px">
+      <h2 style="margin: 0; font-size: 18px; font-weight: 800">Entregados sin cumplido</h2>
+      <div style="background: #FFFFFF; border: 1px solid #DEDAD2; border-radius: 14px; padding: 16px 18px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 600">[PLACA]</div>
+        <div style="flex: 1 1 240px"><div style="font-weight: 700">[Cliente] · [Origen] → [Destino]</div><div style="font-size: 14px; color: #5E5A52">Entregado hace 26 h · foto de entrega cargada · descargue 9 h 20 min</div></div>
+        <span style="background: #FEE2E2; color: #B91C1C; font-size: 13px; font-weight: 700; padding: 5px 9px; border-radius: 999px">Más de 24 h</span>
+        <button type="button" style="height: 44px; padding: 0 18px; border: 0; border-radius: 10px; background: #C2410C; color: #FFFFFF; font-size: 15px; font-weight: 700; font-family: Archivo, sans-serif">Expedir cumplido</button>
+      </div>
+    </section>
+
+    <section style="display: flex; flex-direction: column; gap: 10px">
+      <h2 style="margin: 0; font-size: 18px; font-weight: 800">Pagos a titulares</h2>
+      <div style="background: #FFFFFF; border: 1px solid #DEDAD2; border-radius: 14px; overflow-x: auto">
+        <table style="width: 100%; border-collapse: collapse; font-size: 15px; min-width: 860px">
+          <thead>
+            <tr style="text-align: left; color: #5E5A52; font-size: 13px">
+              <th style="padding: 14px 16px; font-weight: 600">Viaje</th>
+              <th style="padding: 14px 16px; font-weight: 600">Titular</th>
+              <th style="padding: 14px 16px; font-weight: 600; text-align: right">Valor a pagar</th>
+              <th style="padding: 14px 16px; font-weight: 600; text-align: right">Recargo horas</th>
+              <th style="padding: 14px 16px; font-weight: 600; text-align: right">Anticipo</th>
+              <th style="padding: 14px 16px; font-weight: 600; text-align: right">Total</th>
+              <th style="padding: 14px 16px; font-weight: 600">Vence</th>
+              <th style="padding: 14px 16px; font-weight: 600"><span style="position: absolute; left: -9999px">Acción</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-top: 1px solid #EDEAE3">
+              <td style="padding: 14px 16px"><div style="font-weight: 700">PED-1001</div><div style="font-size: 13px; color: #5E5A52">ABC123 · Funza → Itagüí</div></td>
+              <td style="padding: 14px 16px"><div>Juan Pérez</div><div style="font-size: 13px; color: #5E5A52">Bancolombia ···8901</div></td>
+              <td style="padding: 14px 16px; text-align: right">$6.500.000</td>
+              <td style="padding: 14px 16px; text-align: right"><div>$525.273</div><div style="font-size: 13px; color: #5E5A52">3 h en cargue</div></td>
+              <td style="padding: 14px 16px; text-align: right">− $1.500.000</td>
+              <td style="padding: 14px 16px; text-align: right; font-weight: 800">$5.525.273</td>
+              <td style="padding: 14px 16px"><span style="background: #FEF3C7; color: #92400E; font-size: 13px; font-weight: 700; padding: 5px 9px; border-radius: 999px; white-space: nowrap">19 oct</span></td>
+              <td style="padding: 14px 16px"><button type="button" style="height: 40px; padding: 0 14px; border-radius: 10px; border: 1px solid #C9C4BA; background: #FFFFFF; font-size: 14px; font-weight: 700; font-family: Archivo, sans-serif; white-space: nowrap">Registrar pago</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin: 0; font-size: 13px; color: #5E5A52">Recargo: 3 SMLDV por hora adicional para articulados ($175.091) y 2 para rígidos ($116.727), con el salario mínimo de 2026.</p>
+    </section>
+  </main>
+</div>
+
+</body>
+</html>

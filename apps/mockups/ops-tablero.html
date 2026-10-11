@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Monitoreo · Tablero en vivo · Transporte</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#C2410C}a:hover{color:#9A3412}
+</style>
+<style>.barra{background:#0B0C0F;padding:8px 16px}.volver{color:#F3F1EC;font-weight:600;text-decoration:none;font-family:Archivo,sans-serif;font-size:14px}</style>
+</head>
+<body>
+<div class="barra"><a class="volver" href="index.html">← Todas las pantallas</a></div>
+<div style="min-height: 960px; background: #F3F1EC; color: #15171C; font-family: Archivo, sans-serif; display: flex; flex-wrap: wrap">
+  <nav style="flex: 1 1 220px; max-width: 100%; background: #15171C; color: #F3F1EC; padding: 20px 14px; display: flex; flex-direction: column; gap: 4px; box-sizing: border-box">
+    <div style="display: flex; align-items: center; gap: 10px; padding: 0 8px 18px 8px">
+      <div style="width: 32px; height: 32px; border-radius: 8px; background: #C2410C; display: flex; align-items: center; justify-content: center">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h11v9H3z"></path><path d="M14 9h4l3 3v3h-7z"></path><circle cx="7" cy="17.5" r="1.8"></circle><circle cx="17" cy="17.5" r="1.8"></circle></svg>
+      </div>
+      <div style="display: flex; flex-direction: column"><span style="font-weight: 800">Transportes Demo</span><span style="font-size: 12px; color: #A39E94">Monitoreo</span></div>
+    </div>
+    <a href="ops-tablero.html" style="padding: 11px 12px; border-radius: 8px; background: #2A2D35; color: #FFFFFF; font-weight: 700; text-decoration: none">Tablero en vivo</a>
+    <a href="ops-publicar.html" style="padding: 11px 12px; border-radius: 8px; color: #C9C4BA; font-weight: 600; text-decoration: none">Cargas</a>
+    <a href="ops-revision.html" style="padding: 11px 12px; border-radius: 8px; color: #C9C4BA; font-weight: 600; text-decoration: none">Camioneros <span style="background: #C2410C; color: #FFFFFF; font-size: 12px; padding: 1px 7px; border-radius: 999px; margin-left: 4px">2</span></a>
+    <a href="ops-pagos.html" style="padding: 11px 12px; border-radius: 8px; color: #C9C4BA; font-weight: 600; text-decoration: none">Cumplidos y pagos</a>
+    <a href="#" style="padding: 11px 12px; border-radius: 8px; color: #C9C4BA; font-weight: 600; text-decoration: none">Clientes</a>
+  </nav>
+
+  <main style="flex: 999 1 640px; min-width: 0; padding: 24px 28px; display: flex; flex-direction: column; gap: 20px; box-sizing: border-box">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 12px">
+      <div>
+        <h1 style="margin: 0; font-size: 28px; font-weight: 800; letter-spacing: -0.02em">Tablero en vivo</h1>
+        <p style="margin: 4px 0 0 0; color: #5E5A52">Viajes en curso, con alertas primero · se actualiza solo</p>
+      </div>
+      <a href="ops-publicar.html" style="background: #C2410C; color: #FFFFFF; font-weight: 700; padding: 12px 18px; border-radius: 10px; text-decoration: none">Publicar carga</a>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px">
+      <div style="background: #FFFFFF; border: 1px solid #DEDAD2; border-radius: 12px; padding: 16px"><div style="font-size: 13px; color: #5E5A52; font-weight: 600">Viajes en curso</div><div style="font-size: 30px; font-weight: 800">3</div></div>
+      <div style="background: #FFFFFF; border: 1px solid #DEDAD2; border-radius: 12px; padding: 16px"><div style="font-size: 13px; color: #5E5A52; font-weight: 600">Con alertas</div><div style="font-size: 30px; font-weight: 800; color: #B91C1C">2</div></div>
+      <div style="background: #FFFFFF; border: 1px solid #DEDAD2; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 6px">
+        <div style="font-size: 13px; color: #5E5A52; font-weight: 600">Manifiestos sin cumplido (30 días)</div>
+        <div style="display: flex; align-items: baseline; gap: 8px"><span style="font-size: 30px; font-weight: 800">12 %</span><span style="font-size: 13px; color: #5E5A52">límite RNDC 20 %</span></div>
+        <div style="height: 8px; border-radius: 4px; background: #EDEAE3; position: relative"><div style="width: 60%; height: 8px; border-radius: 4px; background: #166534"></div></div>
+      </div>
+      <div style="background: #FFFFFF; border: 1px solid #DEDAD2; border-radius: 12px; padding: 16px"><div style="font-size: 13px; color: #5E5A52; font-weight: 600">Pagos que vencen en 2 días</div><div style="font-size: 30px; font-weight: 800">1</div></div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #DEDAD2; border-radius: 14px; overflow-x: auto">
+      <table style="width: 100%; border-collapse: collapse; font-size: 15px; min-width: 820px">
+        <thead>
+          <tr style="text-align: left; color: #5E5A52; font-size: 13px">
+            <th style="padding: 14px 16px; font-weight: 600">Vehículo</th>
+            <th style="padding: 14px 16px; font-weight: 600">Cliente y ruta</th>
+            <th style="padding: 14px 16px; font-weight: 600">Estado</th>
+            <th style="padding: 14px 16px; font-weight: 600">Alertas</th>
+            <th style="padding: 14px 16px; font-weight: 600">Último GPS</th>
+            <th style="padding: 14px 16px; font-weight: 600"><span style="position: absolute; left: -9999px">Acciones</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-top: 1px solid #EDEAE3; background: #FFF7F5">
+            <td style="padding: 14px 16px"><div style="font-family: 'IBM Plex Mono', monospace; font-weight: 600">[PLACA]</div><div style="font-size: 13px; color: #5E5A52">[Conductor]</div></td>
+            <td style="padding: 14px 16px"><div style="font-weight: 700">[Cliente]</div><div style="font-size: 13px; color: #5E5A52">[Origen] → [Destino]</div></td>
+            <td style="padding: 14px 16px">En el cargue</td>
+            <td style="padding: 14px 16px"><span style="display: inline-block; background: #FEE2E2; color: #B91C1C; font-size: 13px; font-weight: 700; padding: 5px 9px; border-radius: 999px">6 h en el cargue</span> <span style="display: inline-block; background: #FEE2E2; color: #B91C1C; font-size: 13px; font-weight: 700; padding: 5px 9px; border-radius: 999px">Sin manifiesto</span></td>
+            <td style="padding: 14px 16px; color: #5E5A52">hace 2 min</td>
+            <td style="padding: 14px 16px"><a href="#" style="font-weight: 700">Registrar manifiesto</a></td>
+          </tr>
+          <tr style="border-top: 1px solid #EDEAE3; background: #FFF7F5">
+            <td style="padding: 14px 16px"><div style="font-family: 'IBM Plex Mono', monospace; font-weight: 600">XYZ987</div><div style="font-size: 13px; color: #5E5A52">Pedro Rojas</div></td>
+            <td style="padding: 14px 16px"><div style="font-weight: 700">[Cliente]</div><div style="font-size: 13px; color: #5E5A52">[Origen] → [Destino]</div></td>
+            <td style="padding: 14px 16px">En tránsito</td>
+            <td style="padding: 14px 16px"><span style="display: inline-block; background: #FEE2E2; color: #B91C1C; font-size: 13px; font-weight: 700; padding: 5px 9px; border-radius: 999px">Sin señal 40 min</span></td>
+            <td style="padding: 14px 16px; color: #B91C1C; font-weight: 600">hace 40 min</td>
+            <td style="padding: 14px 16px"><a href="#" style="font-weight: 700">Llamar</a></td>
+          </tr>
+          <tr style="border-top: 1px solid #EDEAE3">
+            <td style="padding: 14px 16px"><div style="font-family: 'IBM Plex Mono', monospace; font-weight: 600">ABC123</div><div style="font-size: 13px; color: #5E5A52">Juan Pérez</div></td>
+            <td style="padding: 14px 16px"><div style="font-weight: 700">Alimentos Andinos</div><div style="font-size: 13px; color: #5E5A52">Funza → Itagüí · PED-1001</div></td>
+            <td style="padding: 14px 16px">En tránsito</td>
+            <td style="padding: 14px 16px"><span style="display: inline-block; background: #DCFCE7; color: #166534; font-size: 13px; font-weight: 700; padding: 5px 9px; border-radius: 999px">Al día</span></td>
+            <td style="padding: 14px 16px; color: #5E5A52">hace 1 min</td>
+            <td style="padding: 14px 16px"><a href="#" style="font-weight: 700">Ver viaje</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</div>
+
+</body>
+</html>

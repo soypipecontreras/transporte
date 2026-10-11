@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockups · Transporte</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F3F1EC;color:#15171C;font-family:Archivo,sans-serif}
+main{max-width:1100px;margin:0 auto;padding:48px 16px 64px}
+h1{margin:0;font-size:40px;font-weight:800;letter-spacing:-.03em}
+.lead{margin:8px 0 40px;color:#5E5A52;font-size:17px;max-width:680px;line-height:1.45}
+h2{margin:0 0 6px;font-size:22px;font-weight:800}
+.desc{margin:0 0 16px;color:#5E5A52}
+section{margin-bottom:40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+a.card{display:flex;flex-direction:column;gap:4px;background:#FFFFFF;border:1px solid #DEDAD2;border-radius:14px;padding:18px;text-decoration:none;color:#15171C}
+a.card:hover{border-color:#C2410C}
+a.card span{color:#5E5A52;font-size:14px;line-height:1.4}
+a.card b{font-size:17px}
+.tag{display:inline-block;background:#FDEBDF;color:#9A3412;font-size:12px;font-weight:700;padding:3px 8px;border-radius:999px;margin-left:8px;vertical-align:middle}
+</style>
+</head>
+<body>
+<main>
+<h1>Transporte · mockups</h1>
+<p class="lead">Pantallas de las tres apps sobre el backend que ya existe. Son de navegación: los menús llevan de una pantalla a otra, pero no guardan datos. Datos de la demo: carga PED-1001 de Funza a Itagüí, camión ABC123.</p>
+
+<section>
+<h2>App camionero <span class="tag">celular</span></h2>
+<p class="desc">Ábrela desde el celular para verla a tamaño real.</p>
+<div class="grid">
+<a class="card" href="camionero-ingreso.html"><b>Ingreso</b><span>Correo y contraseña (por ahora)</span></a>
+<a class="card" href="camionero-ofertas.html"><b>Ofertas</b><span>Valor a pagar, anticipo y si sirve para su camión</span></a>
+<a class="card" href="camionero-viaje.html"><b>Viaje en curso</b><span>Reloj de horas logísticas y manifiesto</span></a>
+<a class="card" href="camionero-pagos.html"><b>Mis pagos</b><span>Desglose y fecha de vencimiento</span></a>
+</div>
+</section>
+
+<section>
+<h2>App empresas <span class="tag">web</span></h2>
+<p class="desc">El generador de carga pide cargas y sigue sus camiones.</p>
+<div class="grid">
+<a class="card" href="empresa-cargas.html"><b>Mis cargas</b><span>Lista y formulario para pedir carga</span></a>
+<a class="card" href="empresa-seguimiento.html"><b>Seguimiento</b><span>Mapa, conductor y recorrido</span></a>
+</div>
+</section>
+
+<section>
+<h2>SaaS de monitoreo <span class="tag">web</span></h2>
+<p class="desc">La transportadora aprueba camioneros, publica, monitorea y paga.</p>
+<div class="grid">
+<a class="card" href="ops-tablero.html"><b>Tablero en vivo</b><span>Viajes con alertas y control de cumplidos</span></a>
+<a class="card" href="ops-publicar.html"><b>Publicar carga</b><span>Flete, piso SICE-TAC y margen</span></a>
+<a class="card" href="ops-revision.html"><b>Revisión de camioneros</b><span>Documentos y aprobación</span></a>
+<a class="card" href="ops-pagos.html"><b>Cumplidos y pagos</b><span>Recargos y vencimientos a 5 días hábiles</span></a>
+</div>
+</section>
+</main>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Monitoreo · Revisión de camioneros · Transporte</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#C2410C}a:hover{color:#9A3412}
+textarea{font-family:Archivo,sans-serif}
+</style>
+<style>.barra{background:#0B0C0F;padding:8px 16px}.volver{color:#F3F1EC;font-weight:600;text-decoration:none;font-family:Archivo,sans-serif;font-size:14px}</style>
+</head>
+<body>
+<div class="barra"><a class="volver" href="index.html">← Todas las pantallas</a></div>
+<div style="min-height: 960px; background: #F3F1EC; color: #15171C; font-family: Archivo, sans-serif; display: flex; flex-wrap: wrap">
+  <nav style="flex: 1 1 220px; max-width: 100%; background: #15171C; color: #F3F1EC; padding: 20px 14px; display: flex; flex-direction: column; gap: 4px; box-sizing: border-box">
+    <div style="display: flex; align-items: center; gap: 10px; padding: 0 8px 18px 8px">
+      <div style="width: 32px; height: 32px; border-radius: 8px; background: #C2410C; display: flex; align-items: center; justify-content: center">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h11v9H3z"></path><path d="M14 9h4l3 3v3h-7z"></path><circle cx="7" cy="17.5" r="1.8"></circle><circle cx="17" cy="17.5" r="1.8"></circle></svg>
+      </div>
+      <div style="display: flex; flex-direction: column"><span style="font-weight: 800">Transportes Demo</span><span style="font-size: 12px; color: #A39E94">Monitoreo</span></div>
+    </div>
+    <a href="ops-tablero.html" style="padding: 11px 12px; border-radius: 8px; color: #C9C4BA; font-weight: 600; text-decoration: none">Tablero en vivo</a>
+    <a href="ops-publicar.html" style="padding: 11px 12px; border-radius: 8px; color: #C9C4BA; font-weight: 600; text-decoration: none">Cargas</a>
+    <a href="ops-revision.html" style="padding: 11px 12px; border-radius: 8px; background: #2A2D35; color: #FFFFFF; font-weight: 700; text-decoration: none">Camioneros <span style="background: #C2410C; color: #FFFFFF; font-size: 12px; padding: 1px 7px; border-radius: 999px; margin-left: 4px">2</span></a>
+    <a href="ops-pagos.html" style="padding: 11px 12px; border-radius: 8px; color: #C9C4BA; font-weight: 600; text-decoration: none">Cumplidos y pagos</a>
+    <a href="#" style="padding: 11px 12px; border-radius: 8px; color: #C9C4BA; font-weight: 600; text-decoration: none">Clientes</a>
+  </nav>
+
+  <main style="flex: 999 1 640px; min-width: 0; padding: 24px 28px; display: flex; flex-direction: column; gap: 20px; box-sizing: border-box">
+    <div>
+      <h1 style="margin: 0; font-size: 28px; font-weight: 800; letter-spacing: -0.02em">Revisión de camioneros</h1>
+      <p style="margin: 4px 0 0 0; color: #5E5A52">Solo los aprobados ven tus ofertas. Revisa documentos y estudio de seguridad antes de aprobar.</p>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start">
+      <section style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 10px">
+        <div style="font-size: 13px; font-weight: 600; color: #5E5A52; text-transform: uppercase; letter-spacing: 0.06em">Pendientes (2)</div>
+        <a href="#" style="background: #FFFFFF; border: 2px solid #C2410C; border-radius: 12px; padding: 14px; text-decoration: none; color: #15171C; display: flex; flex-direction: column; gap: 4px">
+          <span style="font-weight: 700">Pedro Rojas</span>
+          <span style="font-size: 14px; color: #5E5A52">C3 · XYZ987 · Estacas · 17 t</span>
+        </a>
+        <a href="#" style="background: #FFFFFF; border: 1px solid #DEDAD2; border-radius: 12px; padding: 14px; text-decoration: none; color: #15171C; display: flex; flex-direction: column; gap: 4px">
+          <span style="font-weight: 700">Luis Gómez</span>
+          <span style="font-size: 14px; color: #5E5A52">C2 · sin vehículo registrado</span>
+        </a>
+      </section>
+
+      <section style="flex: 3 1 460px; background: #FFFFFF; border: 1px solid #DEDAD2; border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 18px">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 12px">
+          <div>
+            <h2 style="margin: 0; font-size: 22px; font-weight: 800">Pedro Rojas</h2>
+            <div style="color: #5E5A52; font-size: 15px">CC 1012345678 · Licencia C3 vence 1 ene 2028 · +57 310 999 8877</div>
+          </div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 16px; background: #F5C518; padding: 4px 10px; border-radius: 4px">XYZ987</div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px">
+          <div style="border: 1px solid #DEDAD2; border-radius: 10px; padding: 12px; display: flex; justify-content: space-between; align-items: center"><span>Cédula</span><span style="color: #166534; font-weight: 700">Cargada</span></div>
+          <div style="border: 1px solid #DEDAD2; border-radius: 10px; padding: 12px; display: flex; justify-content: space-between; align-items: center"><span>Licencia de conducción</span><span style="color: #166534; font-weight: 700">Cargada</span></div>
+          <div style="border: 1px solid #DEDAD2; border-radius: 10px; padding: 12px; display: flex; justify-content: space-between; align-items: center"><span>SOAT · vence 1 may 2027</span><span style="color: #166534; font-weight: 700">Cargado</span></div>
+          <div style="border: 1px solid #DEDAD2; border-radius: 10px; padding: 12px; display: flex; justify-content: space-between; align-items: center"><span>Licencia de tránsito</span><span style="color: #166534; font-weight: 700">Cargada</span></div>
+          <div style="border: 1px solid #F3C9C9; background: #FFF7F5; border-radius: 10px; padding: 12px; display: flex; justify-content: space-between; align-items: center"><span>Planilla PILA del mes</span><span style="color: #B91C1C; font-weight: 700">Falta</span></div>
+          <div style="border: 1px dashed #C9C4BA; border-radius: 10px; padding: 12px; display: flex; justify-content: space-between; align-items: center"><span>Consulta RUNT y SIMIT</span><span style="color: #5E5A52; font-weight: 600">Integración pendiente</span></div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <div style="font-size: 14px; font-weight: 600">Titular (a quién se le paga)</div>
+          <div style="font-size: 15px; color: #5E5A52">Pedro Rojas · Nequi ahorros ···8877</div>
+        </div>
+
+        <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Notas del estudio de seguridad
+          <textarea rows="3" placeholder="Referencias, antecedentes, observaciones" style="border-radius: 10px; border: 1px solid #C9C4BA; padding: 10px 12px; font-size: 15px; resize: vertical"></textarea>
+        </label>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 10px">
+          <button type="button" style="height: 48px; padding: 0 22px; border: 0; border-radius: 10px; background: #166534; color: #FFFFFF; font-size: 16px; font-weight: 700; font-family: Archivo, sans-serif">Aprobar conductor y vehículo</button>
+          <button type="button" style="height: 48px; padding: 0 22px; border-radius: 10px; border: 1px solid #C9C4BA; background: #FFFFFF; color: #15171C; font-size: 16px; font-weight: 700; font-family: Archivo, sans-serif">Pedir documento</button>
+          <button type="button" style="height: 48px; padding: 0 22px; border-radius: 10px; border: 1px solid #C9C4BA; background: #FFFFFF; color: #B91C1C; font-size: 16px; font-weight: 700; font-family: Archivo, sans-serif">Rechazar</button>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+
+</body>
+</html>
