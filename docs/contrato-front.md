@@ -6,7 +6,7 @@ Las tres apps usan el mismo backend:
 
 | App | Quién la usa | Stack del front | Cómo entra |
 |---|---|---|---|
-| App camionero | Conductor independiente (y titular del camión) | Expo (React Native), Android primero | Celular + código OTP |
+| App camionero | Conductor independiente (y titular del camión) | Expo (React Native), Android primero | Por ahora correo + contraseña; después celular + código |
 | App empresas | Generador de carga (cliente) | Next.js | Correo + contraseña |
 | SaaS de monitoreo | Operaciones de la transportadora | Next.js | Correo + contraseña |
 
@@ -21,21 +21,19 @@ export const supabase = createClient(process.env.EXPO_PUBLIC_SUPABASE_URL!, proc
 - **Tipos TypeScript:** `supabase gen types typescript --local > types/database.ts` y `createClient<Database>(...)`. Así cada RPC y tabla queda tipada.
 - Nunca uses la llave `service_role` en el front.
 
-Usuarios de la semilla (`supabase/seed.sql`):
+Usuarios de la semilla (`supabase/seed.sql`), todos con la contraseña `demo1234`:
 
-| Usuario | Acceso | Rol |
-|---|---|---|
-| `ops@demo.co` | contraseña `demo1234` | Dueño de la transportadora "Transportes Demo" |
-| `cliente@demo.co` | contraseña `demo1234` | Dueño del generador "Alimentos Andinos" |
-| `+573001112233` | código `123456` | Camionero aprobado (Juan Pérez, camión ABC123) |
-| `+573004445566` | código `123456` | Camionero pendiente de aprobación |
+| Usuario | Rol |
+|---|---|
+| `ops@demo.co` | Dueño de la transportadora "Transportes Demo" |
+| `cliente@demo.co` | Dueño del generador "Alimentos Andinos" |
+| `camionero@demo.co` | Camionero aprobado (Juan Pérez, camión ABC123) |
+| `camionero2@demo.co` | Camionero pendiente de aprobación (Luis Gómez) |
+
+Por ahora todas las apps entran igual. El ingreso por celular con código queda para cuando haya proveedor de SMS o WhatsApp.
 
 ```ts
-// Camionero
-await supabase.auth.signInWithOtp({ phone: "+573001112233" });
-await supabase.auth.verifyOtp({ phone: "+573001112233", token: "123456", type: "sms" });
-// Empresas
-await supabase.auth.signInWithPassword({ email: "ops@demo.co", password: "demo1234" });
+await supabase.auth.signInWithPassword({ email: "camionero@demo.co", password: "demo1234" });
 ```
 
 ## 2. Errores

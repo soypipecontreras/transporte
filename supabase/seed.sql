@@ -1,19 +1,20 @@
 -- =============================================================================
 -- Semilla de desarrollo (NO va a producción)
 --
--- Usuarios de prueba:
---   ops@demo.co        / demo1234   dueño de la transportadora "Transportes Demo"
---   cliente@demo.co    / demo1234   dueño del generador "Alimentos Andinos"
---   +57 300 111 2233   código 123456   camionero aprobado (Juan Pérez, camión ABC123)
---   +57 300 444 5566   código 123456   camionero pendiente de aprobación (Luis Gómez)
+-- Usuarios de prueba (todos con la contraseña demo1234):
+--   ops@demo.co          dueño de la transportadora "Transportes Demo"
+--   cliente@demo.co      dueño del generador "Alimentos Andinos"
+--   camionero@demo.co    camionero aprobado (Juan Pérez, camión ABC123, celular +57 300 111 2233)
+--   camionero2@demo.co   camionero pendiente de aprobación (Luis Gómez, celular +57 300 444 5566)
+-- Mientras no haya proveedor de SMS, los camioneros también entran con correo y contraseña.
 -- Las fechas se calculan desde el momento en que se carga la semilla.
 -- =============================================================================
 
 insert into auth.users (id, email, phone, raw_user_meta_data) values
   ('a0000000-0000-4000-8000-000000000001', 'ops@demo.co', null, '{"full_name": "Operaciones Demo"}'),
   ('a0000000-0000-4000-8000-000000000002', 'cliente@demo.co', null, '{"full_name": "Carolina Ruiz"}'),
-  ('a0000000-0000-4000-8000-000000000003', null, '573001112233', '{"full_name": "Juan Pérez"}'),
-  ('a0000000-0000-4000-8000-000000000004', null, '573004445566', '{"full_name": "Luis Gómez"}');
+  ('a0000000-0000-4000-8000-000000000003', 'camionero@demo.co', '573001112233', '{"full_name": "Juan Pérez"}'),
+  ('a0000000-0000-4000-8000-000000000004', 'camionero2@demo.co', '573004445566', '{"full_name": "Luis Gómez"}');
 
 -- En Supabase real (no en las pruebas) se completan las columnas que necesita el login.
 do $$
@@ -24,21 +25,19 @@ begin
       update auth.users set
         instance_id = '00000000-0000-0000-0000-000000000000',
         aud = 'authenticated', role = 'authenticated',
-        encrypted_password = case when email is not null then extensions.crypt('demo1234', extensions.gen_salt('bf')) else '' end,
+        encrypted_password = extensions.crypt('demo1234', extensions.gen_salt('bf')),
         email_confirmed_at = case when email is not null then now() end,
         phone_confirmed_at = case when phone is not null then now() end,
         confirmation_token = '', recovery_token = '', email_change = '', email_change_token_new = '',
         email_change_token_current = '', phone_change = '', phone_change_token = '', reauthentication_token = '',
-        raw_app_meta_data = case when email is not null
-          then '{"provider": "email", "providers": ["email"]}'::jsonb
-          else '{"provider": "phone", "providers": ["phone"]}'::jsonb end,
+        raw_app_meta_data = '{"provider": "email", "providers": ["email"]}'::jsonb,
         created_at = now(), updated_at = now()
       where id::text like 'a0000000-0000-4000-8000-%'
     $sql$;
     execute $sql$
       insert into auth.identities (id, user_id, provider_id, provider, identity_data, created_at, updated_at, last_sign_in_at)
-      select gen_random_uuid(), u.id, u.id::text, case when u.email is not null then 'email' else 'phone' end,
-        jsonb_build_object('sub', u.id::text, 'email', u.email, 'phone', u.phone), now(), now(), now()
+      select gen_random_uuid(), u.id, u.id::text, 'email',
+        jsonb_build_object('sub', u.id::text, 'email', u.email), now(), now(), now()
       from auth.users u where u.id::text like 'a0000000-0000-4000-8000-%'
     $sql$;
   end if;
