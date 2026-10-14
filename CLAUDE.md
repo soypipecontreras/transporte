@@ -4,6 +4,8 @@ App de camioneros + app de empresas (generadores) + SaaS de monitoreo para la tr
 
 Contexto legal y operativo del negocio (RNDC, SICE-TAC, Decreto 1017 de 2025): Claude Doc "App de transporte de carga pesada en Colombia: marco legal, logístico y operativo". El tema legal y financiero queda para el final; ahora se construye producto.
 
+Especificación de la app y contexto del negocio: `docs/contexto/` (empezar por su `README.md` y por `05_ESPECIFICACION_APP/`).
+
 ## Comandos
 
 ```bash
